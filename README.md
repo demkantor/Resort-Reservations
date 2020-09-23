@@ -4,6 +4,7 @@ credits to John Smilga
 ### Built with
 * react
 * javascript
+* context api
 * contentful
 
 ### Setup
