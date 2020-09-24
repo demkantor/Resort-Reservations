@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 class SingleRoom extends Component {
 
     render() {
-        const { feturedRooms: rooms } = this.context;
+        
 
         
         return (
