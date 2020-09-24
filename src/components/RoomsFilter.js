@@ -11,10 +11,10 @@ const RoomsFilter = ({ rooms }) => {
 
     const { handleChange, type, capacity, price, minPrice, maxPrice, minSize, maxSize, breakfast, pets } = useContext(RoomContext);
 
-    // get unique types
+    // get unique types to dropdown
     let types = getUnique(rooms, "type");
 
-    // add all
+    // add all values to dropdown
     types = ["all", ...types];
 
     // map to jsx
@@ -24,7 +24,7 @@ const RoomsFilter = ({ rooms }) => {
         </option>
     ));
 
-    // get unique capacity
+    // get unique capacity for dropdown
     let people = getUnique(rooms, "capacity");
     people = people.map((item, index) => (
         <option key={index} value={item}>
@@ -103,7 +103,7 @@ const RoomsFilter = ({ rooms }) => {
                         />
                     </div>
                 </div>
-                {/* end of select type */}
+                {/* end of select size */}
 
                 {/* extras */}
                 <div className="form-group">
@@ -127,7 +127,7 @@ const RoomsFilter = ({ rooms }) => {
                         <label htmlFor="breakfast">pets</label>
                     </div>
                 </div>
-                {/* end of extras type */}
+                {/* end of extras */}
 
             </form>
         </section>
