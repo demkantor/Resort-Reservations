@@ -38,7 +38,7 @@ class Services extends Component {
                     {this.state.services.map((item, i )=> (
                         <article key={ `item-${i}` } className="service">
                             <span>{ item.icon }</span>
-                            <h6>{ item.title }</h6>
+                            <h4>{ item.title }</h4>
                             <p>{ item.info }</p>
                         </article> 
                     ))}
