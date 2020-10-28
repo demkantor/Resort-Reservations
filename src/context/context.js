@@ -1,5 +1,6 @@
 import React, { Component, createContext } from "react";
 import Client from "../Contentful";
+import item from './data';
 
 const RoomContext = createContext();
 
@@ -23,19 +24,19 @@ class RoomProvider extends Component {
     componentDidMount = () => {
         // comment out getdata function and uncomment below to use local data
         this.getData();
-        // let rooms = this.formatData(item);
-        // let featuredRooms = rooms.filter(room => room.featured === true);
-        // let maxPrice = Math.max(...rooms.map(item => item.price));
-        // let maxSize = Math.max(...rooms.map(item => item.size));
-        // this.setState({
-        //     rooms,
-        //     featuredRooms,
-        //     sortedRooms: rooms,
-        //     loading: false,
-        //     price: maxPrice,
-        //     maxPrice,
-        //     maxSize
-        // });
+        let rooms = this.formatData(item);
+        let featuredRooms = rooms.filter(room => room.featured === true);
+        let maxPrice = Math.max(...rooms.map(item => item.price));
+        let maxSize = Math.max(...rooms.map(item => item.size));
+        this.setState({
+            rooms,
+            featuredRooms,
+            sortedRooms: rooms,
+            loading: false,
+            price: maxPrice,
+            maxPrice,
+            maxSize
+        });
     };
 
     // dynamically change rooms displayed by form input
