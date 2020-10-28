@@ -20,7 +20,7 @@ const Navbar = () => {
                     <Link to="/">
                         <img src={ logo } alt="Resort Home" title="head home" />
                     </Link>
-                    <button type="button" className="nav-btn" onClick={ handleToggle }>
+                    <button type="button" ria-label="Nav Toggle" className="nav-btn" onClick={ handleToggle }>
                         <FaAlignRight className="nav-icon" />
                     </button>
                 </div>

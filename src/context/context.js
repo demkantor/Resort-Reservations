@@ -1,5 +1,4 @@
 import React, { Component, createContext } from "react";
-import items from './data';
 import Client from "../Contentful";
 
 const RoomContext = createContext();
@@ -24,7 +23,7 @@ class RoomProvider extends Component {
     componentDidMount = () => {
         // comment out getdata function to use local data
         this.getData();
-        let rooms = this.formatData(items);
+        let rooms = this.formatData(this.state.rooms);
         let featuredRooms = rooms.filter(room => room.featured === true);
         let maxPrice = Math.max(...rooms.map(item => item.price));
         let maxSize = Math.max(...rooms.map(item => item.size));
