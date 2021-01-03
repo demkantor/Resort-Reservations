@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { RoomContext } from "../context/context";
 import StyledHero from "../components/StyledHero";
 import Banner from "../components/Banner";
-import defaultBcg from "../images/room-1.jpeg";
+import defaultBcg from "../images/default-room.jpeg";
 
 const SingleRoom = (props) => {
 

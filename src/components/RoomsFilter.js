@@ -8,7 +8,6 @@ const getUnique = (items, value) => {
 };
 
 const RoomsFilter = ({ rooms }) => {
-
     const { handleChange, type, capacity, price, minPrice, maxPrice, minSize, maxSize, breakfast, pets } = useContext(RoomContext);
 
     // get unique types to dropdown

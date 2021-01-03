@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { FaBeer, FaCocktail, FaHiking, FaShuttleVan } from "react-icons/fa";
-
 import Title from './Title';
 
-class Services extends Component {
 
+class Services extends Component {
     state = {
         services: [
             {
@@ -35,13 +34,15 @@ class Services extends Component {
             <section className="services">
                 <Title title="services" />
                 <div className="services-center">
-                    {this.state.services.map((item, i )=> (
-                        <article key={ `item-${i}` } className="service">
-                            <span>{ item.icon }</span>
-                            <h4>{ item.title }</h4>
-                            <p>{ item.info }</p>
-                        </article> 
-                    ))}
+                    { this.state.services &&
+                        this.state.services.map((item, i )=> (
+                            <article key={ `item-${i}` } className="service">
+                                <span>{ item.icon }</span>
+                                <h4>{ item.title }</h4>
+                                <p>{ item.info }</p>
+                            </article> 
+                        ))
+                    }
                 </div>
           </section>
         );

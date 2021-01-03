@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-
 import { FaAlignRight } from "react-icons/fa";
 import logo from '../images/logo.svg';
 
 
 const Navbar = () => {
-
     const [isOpen, setIsOpen] = useState(false);
-    
+
     const handleToggle = () => {
-        setIsOpen(!isOpen);
+        setIsOpen(prevState => !prevState);
     };
 
     return (
