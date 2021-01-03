@@ -16,7 +16,7 @@ const Navbar = () => {
             <div className="nav-center">
                 <div className="nav-header">
                     <Link to="/">
-                        <img src={ logo } alt="Resort Home" title="head home" />
+                        <img src={ logo } height="37" width="250" alt="Resort Home" title="head home" />
                     </Link>
                     <button type="button" aria-label="Nav Toggle" className="nav-btn" onClick={ handleToggle }>
                         <FaAlignRight className="nav-icon" />

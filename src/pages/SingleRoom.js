@@ -48,19 +48,19 @@ const SingleRoom = (props) => {
                     </article>
                     <article className="info">
                         <h3>info</h3>
-                        <h6>price : ${ price }</h6>
-                        <h6>size : { size } SQFT</h6>
-                        <h6>
+                        <h5>price : ${ price }</h5>
+                        <h5>size : { size } SQFT</h5>
+                        <h5>
                             max capacity :
                             {capacity > 1 ? `${capacity} people` : `${capacity} person`}
-                        </h6>
-                        <h6>{ pets ? "pets allowed" : "no pets allowed" }</h6>
-                        <h6>{ breakfast && "free breakfast included" }</h6>
+                        </h5>
+                        <h5>{ pets ? "pets allowed" : "no pets allowed" }</h5>
+                        <h5>{ breakfast && "free breakfast included" }</h5>
                     </article>
                 </div>
             </section>
             <section className="room-extras">
-                <h6>extras</h6>
+                <h5>extras</h5>
                 <ul className="extras">
                     {extras.map((item, i) => (
                         <li key={i}>- {item}</li>

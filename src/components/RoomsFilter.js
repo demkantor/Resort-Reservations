@@ -84,7 +84,7 @@ const RoomsFilter = ({ rooms }) => {
 
                 {/* size */}
                 <div className="form-group">
-                    <label htmlFor="price">room size </label>
+                    <label htmlFor="minSize">room size </label>
                     <div className="size-inputs">
                         <input
                             type="number"
@@ -123,7 +123,7 @@ const RoomsFilter = ({ rooms }) => {
                             checked={ pets }
                             onChange={ handleChange }
                         />
-                        <label htmlFor="breakfast">pets</label>
+                        <label htmlFor="pets">pets</label>
                     </div>
                 </div>
                 {/* end of extras */}
