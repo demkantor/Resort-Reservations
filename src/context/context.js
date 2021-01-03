@@ -24,19 +24,19 @@ class RoomProvider extends Component {
     componentDidMount = () => {
         // comment out getdata function and uncomment below to use local data
         this.getData();
-        let rooms = this.formatData(item);
-        let featuredRooms = rooms.filter(room => room.featured === true);
-        let maxPrice = Math.max(...rooms.map(item => item.price));
-        let maxSize = Math.max(...rooms.map(item => item.size));
-        this.setState({
-            rooms,
-            featuredRooms,
-            sortedRooms: rooms,
-            loading: false,
-            price: maxPrice,
-            maxPrice,
-            maxSize
-        });
+        // let rooms = this.formatData(item);
+        // let featuredRooms = rooms.filter(room => room.featured === true);
+        // let maxPrice = Math.max(...rooms.map(item => item.price));
+        // let maxSize = Math.max(...rooms.map(item => item.size));
+        // this.setState({
+        //     rooms,
+        //     featuredRooms,
+        //     sortedRooms: rooms,
+        //     loading: false,
+        //     price: maxPrice,
+        //     maxPrice,
+        //     maxSize
+        // });
     };
 
     // dynamically change rooms displayed by form input
@@ -82,9 +82,7 @@ class RoomProvider extends Component {
     formatData = (items) => {
         let tempItems = items.map(item => {
             let id = item.sys.id;
-            console.log(item.fields.images)
             let images = item.fields.images.map(image => image.fields.file.url);
-            console.log(images);
             let room = { ...item.fields, images, id };
             return room;
         });
