@@ -10,7 +10,7 @@ const Room = ({ room }) => {
     return (
         <article className="room">
             <div className="img-container">
-                <img src={ images[0] || defaultImg } alt="single room" title={ `click for more deatails on the ${name} room` } />
+                <img src={ images[0] || defaultImg } alt="single room" title={ `click for more deatails on the ${name} room` } height="200" width="360" />
                 <div className="price-top">
                     <h5>${ price }</h5>
                     <p>per night</p>

@@ -38,7 +38,7 @@ const SingleRoom = (props) => {
             <section className="single-room">
                 <div className="single-room-images">
                     {otherImages.map((item, i) => (
-                        <img key={i} src={item} alt={name} />
+                        <img key={i} src={item} alt={name} height="200" width="360"/>
                     ))}
                 </div>
                 <div className="single-room-info">
